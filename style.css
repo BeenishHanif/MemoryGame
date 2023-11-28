@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Dancing Script", cursive;
+  background: #fff;
+}
+h1 {
+  font-weight: 400;
+  font-size: 2rem;
+  color: orange;
+  text-align: center;
+  margin-bottom: 10px;
+}
+span {
+  color: orange;
+  font-size: 1.5rem;
+  margin-left: 275px;
+}
+.inner-container {
+  padding: 20px;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+button {
+  background-color: orange;
+  padding: 10px;
+  color: #fff;
+  border-radius: 16px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.outside-container {
+  position: absolute;
+  left: 30%;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 0.8rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-radius: 25px;
+}
+.box {
+  height: 150px;
+  width: 150px;
+}
+.tile {
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  border-radius: 20px;
+  transition: transform 0.3s ease-in;
+  backface-visibility: visible;
+}
+.tile-front {
+  border-radius: 20px;
+  background: url("images/back.avif");
+  background-size: cover;
+  position: absolute;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s ease-in;
+  backface-visibility: hidden;
+}
+
+.tile-front-hover {
+  transform: translate(-50%, -50%) rotateY(90deg);
+}
+
+#timer {
+  display: inline-block;
+}
+
+.overlay {
+  position: absolute;
+  background-color: transparent;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+  overflow: hidden;
+  z-index: -1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.banner {
+  background-color: antiquewhite;
+  height: 250px;
+  width: 400px;
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -50%);
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner h2 {
+  position: absolute;
+  top: 25%;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: orange;
+}
+
+.banner button {
+  margin-top: 100px;
+}
